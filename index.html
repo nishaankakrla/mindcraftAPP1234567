@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindCraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              mc: {
+                bg: '#F4F1ED',      // Warm light neutral background
+                card: '#FFFCF9',    // Soft white with warm tint
+                text: '#2D2D2D',    // Dark charcoal
+                muted: '#757575',   // Soft grey
+                light: '#D6D2CD',   // Muted light grey
+                border: '#E8E4E0',  // Subtle warm border
+                primary: '#8E9AAF', // Muted blue-grey primary
+                secondary: '#CBC0D3', // Muted lavender secondary
+                active: '#EFD3D7',  // Muted peach active
+              },
+              pastel: {
+                peach: '#FAD4D4',   // Muted peach
+                mint: '#D4E2D4',    // Soft sage green
+                lavender: '#E2D4FA',// Dusty lavender
+                beige: '#F5E6D3',   // Light sand
+                gray: '#E8E4E0',    // Surface Container
+                blue: '#D4E2FA',    // Light muted blue
+                yellow: '#FAF4D4'   // Pale cream
+              },
+              gemini: {
+                start: '#8E9AAF',
+                middle: '#CBC0D3',
+                end: '#EFD3D7'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'], // Acts as Google Sans
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            fontSize: {
+              xs: ['0.75rem', { lineHeight: '1rem' }],    // 12px
+              sm: ['0.875rem', { lineHeight: '1.25rem' }], // 14px
+              base: ['1rem', { lineHeight: '1.5rem' }],    // 16px
+              lg: ['1.125rem', { lineHeight: '1.75rem' }],
+              xl: ['1.375rem', { lineHeight: '1.75rem' }],
+              '2xl': ['1.75rem', { lineHeight: '2.25rem' }],
+            },
+            boxShadow: {
+              'soft': '0 2px 10px rgba(45, 45, 45, 0.05)', // Very soft, diffused
+              'float': '0 10px 25px rgba(45, 45, 45, 0.08)', // Soft elevation
+              'button': '0 2px 4px rgba(0, 0, 0, 0.02)',
+              'glow': '0 0 20px rgba(142, 154, 175, 0.1)',
+            },
+            borderRadius: {
+              'card': '24px', // Material 3 Card Radius
+              'pill': '9999px',
+              'jumbo': '32px',
+              'input': '16px',
+            },
+            borderWidth: {
+              '1.5': '1.5px',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Hide scrollbar */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      body {
+        background-color: #F4F1ED;
+        color: #2D2D2D;
+      }
+
+      /* Gemini Gradient Text */
+      .text-gradient {
+        background: linear-gradient(90deg, #8E9AAF, #CBC0D3, #EFD3D7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      /* NotebookLM style selection */
+      ::selection {
+        background-color: #EFD3D7;
+        color: #2D2D2D;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-mc-bg text-mc-text antialiased font-sans overflow-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
