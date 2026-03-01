@@ -105,6 +105,15 @@ export interface Course {
   progress?: number; // 0-100
   image?: string;
   tags?: string[];
+  creator?: {
+    name: string;
+    avatar: string;
+    isVerified?: boolean;
+  };
+  rating?: number;
+  studentsEnrolled?: number;
+  modulesCount?: number;
+  isEnrolled?: boolean;
 }
 
 export interface Mentor {
@@ -123,6 +132,20 @@ export interface Exam {
   description: string;
   badges?: string[];
   status: string;
+  image?: string;
+  creator?: {
+    name: string;
+    avatar: string;
+    isVerified?: boolean;
+  };
+  rating?: number;
+  attemptCount?: number;
+  isPractice?: boolean;
+  price?: string;
+  isEnrolled?: boolean;
+  duration?: string;
+  modulesCount?: number;
+  tags?: string[];
 }
 
 export interface Task {

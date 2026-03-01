@@ -469,7 +469,17 @@ export const SKILL_FORGE_COURSES: Course[] = RAW_COURSE_LIST.map((item, idx) => 
         level: 'All Levels',
         price: isActive ? '₹2,999' : 'Coming Soon',
         progress: 0,
-        isAI: false
+        isAI: false,
+        image: `https://picsum.photos/seed/sf-${idx}/600/400`,
+        creator: {
+            name: 'MindCraft Academy',
+            avatar: 'https://picsum.photos/seed/mc/40/40',
+            isVerified: true
+        },
+        rating: 4.8,
+        studentsEnrolled: 1200,
+        modulesCount: 12,
+        tags: [item.c, 'SkillForge']
     };
 });
 
@@ -566,16 +576,16 @@ export const EXAM_CATEGORIES = [
 
 export const DUMMY_EXAMS: Exam[] = [
   // 1. School-Level Exams
-  { id: 'sch1', name: 'Board Exams', level: 'School Level', stream: 'General', nextAttempt: 'TBA', description: 'CBSE, ICSE, and State Board preparations.', badges: ['Class 10', 'Class 12'], status: 'Coming Soon' },
-  { id: 'sch2', name: 'International Curriculum', level: 'School Level', stream: 'General', nextAttempt: 'TBA', description: 'IGCSE, IB, Cambridge, and AP support.', badges: ['IB', 'IGCSE'], status: 'Coming Soon' },
-  { id: 'sch3', name: 'Olympiads', level: 'School Level', stream: 'STEM', nextAttempt: 'TBA', description: 'Math, Science, English, Cyber, and AI Olympiads.', badges: ['IMO', 'NSO'], status: 'Coming Soon' },
-  { id: 'sch4', name: 'NTSE / NMMS / KVPY', level: 'School Level', stream: 'Scholarship', nextAttempt: 'TBA', description: 'Junior Talent Scholarship Tests.', badges: ['Scholarship', 'Govt'], status: 'Coming Soon' },
-  { id: 'sch5', name: 'Foundation JEE/NEET', level: 'School Level', stream: 'Foundation', nextAttempt: 'TBA', description: 'Early entry tests prep for JEE/NEET.', badges: ['Foundation'], status: 'Coming Soon' },
+  { id: 'sch1', name: 'Board Exams', level: 'School Level', stream: 'General', nextAttempt: 'TBA', description: 'CBSE, ICSE, and State Board preparations.', badges: ['Class 10', 'Class 12'], status: 'Coming Soon', image: 'https://picsum.photos/seed/boards/600/400', creator: { name: 'ExamPrep Official', avatar: 'https://picsum.photos/seed/exam/40/40', isVerified: true }, rating: 4.8, price: 'Free', tags: ['School', 'Boards'] },
+  { id: 'sch2', name: 'International Curriculum', level: 'School Level', stream: 'General', nextAttempt: 'TBA', description: 'IGCSE, IB, Cambridge, and AP support.', badges: ['IB', 'IGCSE'], status: 'Coming Soon', image: 'https://picsum.photos/seed/ib/600/400', creator: { name: 'Global Ed', avatar: 'https://picsum.photos/seed/global/40/40', isVerified: true }, rating: 4.9, price: '₹4,999', tags: ['International', 'IB'] },
+  { id: 'sch3', name: 'Olympiads', level: 'School Level', stream: 'STEM', nextAttempt: 'TBA', description: 'Math, Science, English, Cyber, and AI Olympiads.', badges: ['IMO', 'NSO'], status: 'Coming Soon', image: 'https://picsum.photos/seed/olym/600/400', creator: { name: 'STEM Academy', avatar: 'https://picsum.photos/seed/stem/40/40', isVerified: true }, rating: 4.7, price: '₹999', tags: ['STEM', 'Olympiad'] },
+  { id: 'sch4', name: 'NTSE / NMMS / KVPY', level: 'School Level', stream: 'Scholarship', nextAttempt: 'TBA', description: 'Junior Talent Scholarship Tests.', badges: ['Scholarship', 'Govt'], status: 'Coming Soon', image: 'https://picsum.photos/seed/scholar/600/400', creator: { name: 'Govt Prep', avatar: 'https://picsum.photos/seed/govt/40/40', isVerified: true }, rating: 4.6, price: 'Free', tags: ['Scholarship', 'Govt'] },
+  { id: 'sch5', name: 'Foundation JEE/NEET', level: 'School Level', stream: 'Foundation', nextAttempt: 'TBA', description: 'Early entry tests prep for JEE/NEET.', badges: ['Foundation'], status: 'Coming Soon', image: 'https://picsum.photos/seed/found/600/400', creator: { name: 'MindCraft Academy', avatar: 'https://picsum.photos/seed/mc/40/40', isVerified: true }, rating: 4.8, price: '₹1,999', tags: ['Foundation', 'JEE'] },
 
   // 2. Undergraduate Entrance Exams
   // Engineering
-  { id: 'ug1', name: 'JEE Main / Advanced', level: 'UG Entrance', stream: 'Engineering', nextAttempt: 'TBA', description: 'Joint Entrance Examination for IITs, NITs.', badges: ['National', 'Top Tier'], status: 'Coming Soon' },
-  { id: 'ug2', name: 'WBJEE', level: 'UG Entrance', stream: 'Engineering', nextAttempt: 'TBA', description: 'West Bengal Joint Entrance Exam.', badges: ['State'], status: 'Coming Soon' },
+  { id: 'ug1', name: 'JEE Main / Advanced', level: 'UG Entrance', stream: 'Engineering', nextAttempt: 'TBA', description: 'Joint Entrance Examination for IITs, NITs.', badges: ['National', 'Top Tier'], status: 'Coming Soon', image: 'https://picsum.photos/seed/jee/600/400', creator: { name: 'Physics Galaxy', avatar: 'https://picsum.photos/seed/pg/40/40', isVerified: true }, rating: 4.9, price: '₹9,999', tags: ['Engineering', 'IIT'], isEnrolled: true },
+  { id: 'ug2', name: 'WBJEE', level: 'UG Entrance', stream: 'Engineering', nextAttempt: 'TBA', description: 'West Bengal Joint Entrance Exam.', badges: ['State'], status: 'Coming Soon', image: 'https://picsum.photos/seed/wbjee/600/400', creator: { name: 'State Prep', avatar: 'https://picsum.photos/seed/state/40/40', isVerified: true }, rating: 4.5, price: '₹2,499', tags: ['State', 'Engineering'] },
   { id: 'ug3', name: 'MHT-CET', level: 'UG Entrance', stream: 'Engineering', nextAttempt: 'TBA', description: 'Maharashtra Common Entrance Test.', badges: ['State'], status: 'Coming Soon' },
   { id: 'ug4', name: 'KCET', level: 'UG Entrance', stream: 'Engineering', nextAttempt: 'TBA', description: 'Karnataka Common Entrance Test.', badges: ['State'], status: 'Coming Soon' },
   { id: 'ug5', name: 'COMEDK', level: 'UG Entrance', stream: 'Engineering', nextAttempt: 'TBA', description: 'Consortium of Medical, Engineering and Dental Colleges of Karnataka.', badges: ['State'], status: 'Coming Soon' },
@@ -793,7 +803,12 @@ export const AI_COURSES: Course[] = [
         price: 'Free',
         isAI: true,
         tags: ['Speaking', 'Writing', 'Grammar'],
-        image: 'https://picsum.photos/seed/engai/400/200'
+        image: 'https://picsum.photos/seed/engai/600/400',
+        creator: { name: 'AI Tutor Pro', avatar: 'https://picsum.photos/seed/aitutor/40/40', isVerified: true },
+        rating: 4.9,
+        studentsEnrolled: 5000,
+        modulesCount: 24,
+        isEnrolled: true
     },
     {
         id: 'ai-lang-2',
@@ -805,7 +820,11 @@ export const AI_COURSES: Course[] = [
         price: '₹1,499',
         isAI: true,
         tags: ['Speaking', 'Vocabulary'],
-        image: 'https://picsum.photos/seed/spanai/400/200'
+        image: 'https://picsum.photos/seed/spanai/600/400',
+        creator: { name: 'Language Bot', avatar: 'https://picsum.photos/seed/langbot/40/40', isVerified: true },
+        rating: 4.7,
+        studentsEnrolled: 2500,
+        modulesCount: 30
     },
     {
         id: 'ai-lang-3',
@@ -817,7 +836,11 @@ export const AI_COURSES: Course[] = [
         price: '₹2,999',
         isAI: true,
         tags: ['Kanji', 'Pronunciation'],
-        image: 'https://picsum.photos/seed/jpnai/400/200'
+        image: 'https://picsum.photos/seed/jpnai/600/400',
+        creator: { name: 'Sensei AI', avatar: 'https://picsum.photos/seed/sensei/40/40', isVerified: true },
+        rating: 4.8,
+        studentsEnrolled: 1800,
+        modulesCount: 50
     },
     // AI Engineering
     {
@@ -829,7 +852,13 @@ export const AI_COURSES: Course[] = [
         level: 'Intermediate',
         price: '₹999',
         isAI: true,
-        progress: 45
+        progress: 45,
+        image: 'https://picsum.photos/seed/gpt/600/400',
+        creator: { name: 'MindCraft AI', avatar: 'https://picsum.photos/seed/mcai/40/40', isVerified: true },
+        rating: 4.9,
+        studentsEnrolled: 3400,
+        modulesCount: 8,
+        isEnrolled: true
     },
     {
         id: 'ai-eng-2',
@@ -839,7 +868,12 @@ export const AI_COURSES: Course[] = [
         duration: '8 hours',
         level: 'Advanced',
         price: '₹3,499',
-        isAI: true
+        isAI: true,
+        image: 'https://picsum.photos/seed/rag/600/400',
+        creator: { name: 'MindCraft AI', avatar: 'https://picsum.photos/seed/mcai/40/40', isVerified: true },
+        rating: 4.8,
+        studentsEnrolled: 1200,
+        modulesCount: 15
     },
     // Tools
     {
@@ -850,7 +884,12 @@ export const AI_COURSES: Course[] = [
         duration: '4 hours',
         level: 'Beginner',
         price: '₹499',
-        isAI: true
+        isAI: true,
+        image: 'https://picsum.photos/seed/prompt/600/400',
+        creator: { name: 'Prompt Master', avatar: 'https://picsum.photos/seed/pm/40/40', isVerified: true },
+        rating: 4.9,
+        studentsEnrolled: 8000,
+        modulesCount: 6
     }
 ];
 

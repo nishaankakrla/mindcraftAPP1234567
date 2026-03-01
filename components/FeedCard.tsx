@@ -236,7 +236,7 @@ const FeedCard: React.FC<FeedCardProps> = ({ post }) => {
   };
 
   return (
-    <article className="bg-mc-card rounded-2xl p-4 shadow-soft border border-mc-border hover:shadow-float hover:border-mc-text/10 transition-all duration-300">
+    <article className="bg-mc-card rounded-[28px] p-6 shadow-soft border border-mc-border hover:shadow-float hover:-translate-y-1 transition-all duration-500 ease-out group">
       {post.type !== 'video' && <Header />}
       {renderContent()}
       {post.type !== 'video' && <Footer />}
